@@ -18,4 +18,4 @@ jobs:
         command: scp -r ./html /var/www/html
         host: ${{ secrets.HOST }}
         username: ubuntu
-        key: ${{ secrets.SSH}}
+        privateKey: ${{ secrets.SSH}}
