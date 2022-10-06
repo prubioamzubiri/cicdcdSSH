@@ -12,6 +12,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v1
+    - name: ls local
+      run: ls -l
 #    - name: SSH Connection
 #      uses: garygrossgarten/github-action-ssh@release
 #      with:
