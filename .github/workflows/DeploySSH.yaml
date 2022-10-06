@@ -25,4 +25,4 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ubuntu
         key: ${{ secrets.SSH }}
-        script: whoami
+        script: scp -r ./html /var/www/html
