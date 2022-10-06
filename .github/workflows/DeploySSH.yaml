@@ -21,7 +21,7 @@ jobs:
         username: ubuntu
         key: ${{ secrets.SSH }}
         source: html/*
-        target: /var/www/html
+        target: /var/www
 
 
       #######################SSH##########################
