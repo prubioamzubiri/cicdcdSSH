@@ -12,10 +12,17 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v1
-    - name: SSH Connection
-      uses: garygrossgarten/github-action-ssh@release
+#    - name: SSH Connection
+#      uses: garygrossgarten/github-action-ssh@release
+#      with:
+#        command: scp -r ./html /var/www/html
+#        host: ${{ secrets.HOST }}
+#        username: ubuntu
+#        Key: ${{ secrets.SSH}}
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
       with:
-        command: scp -r ./html /var/www/html
         host: ${{ secrets.HOST }}
         username: ubuntu
-        Key: ${{ secrets.SSH}}
+        key: ${{ secrets.SSH }}
+        script: whoami
