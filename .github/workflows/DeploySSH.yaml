@@ -7,7 +7,7 @@ on:
 
 jobs:
   Continous_deployment:
-    name: Continous Deployment Heroku
+    name: Continous Deployment SSH
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -18,4 +18,4 @@ jobs:
         command: scp -r ./html /var/www/html
         host: ${{ secrets.HOST }}
         username: ubuntu
-        privateKey: ${{ secrets.SSH}}
+        Key: ${{ secrets.SSH}}
